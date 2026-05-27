@@ -32,7 +32,7 @@
 #     <pellegrinoprevete@gmail.com>
 #     <dvorak@0x87003Bd6C074C713783df04f36517451fF34CBEf>
 # Contributors:
-#   Antonio Rojas
+	#   Antonio Rojas
 #     <arojas@archlinux.org>
 #   Allan McRae
 #     <allan@archlinux.org>
@@ -97,16 +97,14 @@ if [[ ! -v "_git_service" ]]; then
     _git_service="github"
   fi
 fi
+if [[ ! -v "_offline" ]]; then
+  _offline="false"
+fi
 if [[ ! -v "_tag_name" ]]; then
   if [[ "${_ns}" == "gnu" ]]; then
     _tag_name="pkgver"
   elif [[ "${_ns}" == "themartiancompany" ]]; then
     _tag_name="commit"
-  fi
-fi
-if [[ ! -v "_archive_format" ]]; then
-  if [[ "${_ns}" == "gnu" ]]; then
-    _archive_format="tar.xz"
   fi
 fi
 if [[ ! -v "_archive_format" ]]; then
